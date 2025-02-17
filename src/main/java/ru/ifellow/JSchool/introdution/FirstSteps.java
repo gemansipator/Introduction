@@ -87,12 +87,12 @@ public class FirstSteps {
 
     public boolean isSortedDescendant(int[] array) {
         if (array.length == 0) {
-            return true; // всё по порядку
+            return true;
         }
 
         for (int i = 0; i < array.length - 1; i++) {
             if (array[i] < array[i + 1]) {
-                return false; // Если нашли возрастание — не убывающий порядок
+                return false;
             }
         }
 
@@ -153,7 +153,7 @@ public class FirstSteps {
         int max = Integer.MIN_VALUE;
         for(int i = 0; i < matrix.length; i++){
             for(int j = 0; j < matrix[i].length; j++){
-                if (matrix[i][j] > max) {  // Если текущий элемент больше найденного максимума
+                if (matrix[i][j] > max) {
                     max = matrix[i][j];
                 }
             }
@@ -163,17 +163,16 @@ public class FirstSteps {
     }
 
     public int diagonalMax(int[][] matrix){
-        // Проверка на пустой массив или массив с нулевой длиной
+
         if (matrix.length == 0 || matrix[0].length == 0) {
-            return Integer.MIN_VALUE; // Если массив пустой, возвращаем Integer.MIN_VALUE
+            return Integer.MIN_VALUE;
         }
-        // Проверка на квадратность массива
+
         if (matrix.length != matrix[0].length) {
-            return Integer.MIN_VALUE; // Если массив не квадратный, возвращаем Integer.MIN_VALUE
+            return Integer.MIN_VALUE;
         }
         int max = Integer.MIN_VALUE;
         for (int i = 0; i < matrix.length; i++) {
-            // Проверяем только элементы на главной диагонали (где строки и столбцы одинаковые)
             if (matrix[i][i] > max) {
                 max = matrix[i][i];
             }
