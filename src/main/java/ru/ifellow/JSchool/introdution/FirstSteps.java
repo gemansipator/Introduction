@@ -12,16 +12,11 @@ public class FirstSteps {
     }
 
     public int div (int x, int y){
-        if(y == 0){
-            System.out.println("На ноль делить нельзя");
-        }
         return x / y;
     }
 
     public int mod (int x, int y){
-        if(y == 0){
-            System.out.println("На ноль делить нельзя");
-        }
+
         return x % y;
     }
 
