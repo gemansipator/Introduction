@@ -42,7 +42,7 @@ public class FirstSteps {
     }
 
     public int mul(int[] array) {
-        if (array.length == 0) {
+        if (array == null || array.length == 0) {
             return 0;
         }
         int mul = 1;
