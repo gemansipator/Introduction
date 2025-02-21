@@ -41,13 +41,17 @@ public class FirstSteps {
 
     }
 
-    public int mul(int[] array){
+    public int mul(int[] array) {
+        if (array.length == 0) {
+            return 0; // Для пустого массива возвращаем 0
+        }
         int mul = 1;
-        for(int i : array){
+        for (int i : array) {
             mul *= i;
         }
         return mul;
     }
+
 
     public int min(int[] array){
         int min = Integer.MAX_VALUE;
