@@ -43,7 +43,7 @@ public class FirstSteps {
 
     public int mul(int[] array) {
         if (array.length == 0) {
-            return 0; // Для пустого массива возвращаем 0
+            return 0;
         }
         int mul = 1;
         for (int i : array) {
