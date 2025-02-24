@@ -86,16 +86,14 @@ public class FirstSteps {
     }
 
     public boolean isSortedDescendant(int[] array) {
-        if (array.length == 0) {
-            return true;
+        if (array == null || array.length == 0) {
+            return false;
         }
-
-        for (int i = 0; i < array.length - 1; i++) {
-            if (array[i] < array[i + 1]) {
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] >= array[i - 1]) { // Строгое убывание
                 return false;
             }
         }
-
         return true;
     }
 
@@ -181,9 +179,12 @@ public class FirstSteps {
 
     }
 
-    public boolean isSortedDescendant(int[][] matrix){
-        for(int i = 0; i < matrix.length; i++){
-            if(!isSortedDescendant(matrix[i])){
+    public boolean isSortedDescendant(int[][] array) {
+        if (array == null || array.length == 0) {
+            return false;
+        }
+        for (int[] row : array) {
+            if (!isSortedDescendant(row)) { // Проверяем каждую строку
                 return false;
             }
         }
