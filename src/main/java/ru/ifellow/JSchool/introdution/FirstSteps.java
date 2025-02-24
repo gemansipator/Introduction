@@ -86,16 +86,17 @@ public class FirstSteps {
     }
 
     public boolean isSortedDescendant(int[] array) {
-        if (array == null || array.length == 0) {
-            return false;
+        if (array == null || array.length == 0) { // Пустой массив должен возвращать true
+            return true;
         }
         for (int i = 1; i < array.length; i++) {
-            if (array[i] >= array[i - 1]) { // Строгое убывание
+            if (array[i] >= array[i - 1]) { // Проверяем строгое убывание
                 return false;
             }
         }
         return true;
     }
+
 
     public void cube(int[]array){
 
@@ -180,15 +181,16 @@ public class FirstSteps {
     }
 
     public boolean isSortedDescendant(int[][] array) {
-        if (array == null || array.length == 0) {
-            return false;
+        if (array == null || array.length == 0) { // Пустая матрица должна возвращать true
+            return true;
         }
         for (int[] row : array) {
-            if (!isSortedDescendant(row)) {
+            if (!isSortedDescendant(row)) { // Проверяем каждую строку
                 return false;
             }
         }
         return true;
     }
+
 
 }
