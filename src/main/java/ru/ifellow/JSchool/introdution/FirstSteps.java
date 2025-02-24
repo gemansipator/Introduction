@@ -184,7 +184,7 @@ public class FirstSteps {
             return false;
         }
         for (int[] row : array) {
-            if (!isSortedDescendant(row)) { // Проверяем каждую строку
+            if (!isSortedDescendant(row)) {
                 return false;
             }
         }
